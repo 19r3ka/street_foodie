@@ -1,34 +1,32 @@
 <template>
-  <v-container fluid>
-    <v-autocomplete
-      v-model="offers"
-      v-model:search="newFoodType"
-      :items="foodTypes"
-      variant="outlined"
-      label="Foods available*"
-      placeholder="Search for food type here"
-      chips
-      closable-chips
-      clearable
-      multiple
-      required
-    >
-      <template v-slot:no-data>
-        <v-alert type="info" variant="tonal" density="compact">
-          <div class="d-flex flex-row align-center justify-space-between">
-            <p class="mr-3">
-              Your search yielded no result in our databases. Feel free to add
-              it as a new food type.
-            </p>
+  <v-autocomplete
+    v-model="offers"
+    v-model:search="newFoodType"
+    :items="foodTypes"
+    variant="outlined"
+    label="Foods available*"
+    placeholder="Search for food type here"
+    chips
+    closable-chips
+    clearable
+    multiple
+    required
+  >
+    <template v-slot:no-data>
+      <v-alert type="info" variant="tonal" density="compact">
+        <div class="d-flex flex-row align-center justify-space-between">
+          <p class="mr-3">
+            Your search yielded no result in our databases. Feel free to add it
+            as a new food type.
+          </p>
 
-            <v-btn color="info" variant="outlined" @click="addFoodType">
-              Add
-            </v-btn>
-          </div>
-        </v-alert>
-      </template>
-    </v-autocomplete>
-  </v-container>
+          <v-btn color="info" variant="outlined" @click="addFoodType">
+            Add
+          </v-btn>
+        </div>
+      </v-alert>
+    </template>
+  </v-autocomplete>
 </template>
 
 <script setup>

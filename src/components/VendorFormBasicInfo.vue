@@ -20,8 +20,8 @@
       variant="outlined"
       rows="4"
     ></v-textarea>
-    <my-location-input v-model="formData.location"></my-location-input>
     <my-food-types-input v-model="formData.offers"></my-food-types-input>
+    <my-location-input v-model="formData.location"></my-location-input>
   </v-form>
 </template>
 
